@@ -36,6 +36,7 @@ let store = createStore(candyReducer);
 store.dispatch({ type: "@@INIT" });
 
 // Create Action Function
+// this is step one to even be able to create a candy
 function createCandy(candy) {
   return {
     // returning the action
@@ -44,4 +45,9 @@ function createCandy(candy) {
   };
 }
 
+// Action Creator -> Action -> dispatch -> Reducers -> State
+
+// feed this created action to dispatch
+// dispatch will forward the action to a reducers
+// reducers will create a new state
 store.dispatch(createCandy("Twix"));
