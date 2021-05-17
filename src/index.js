@@ -38,6 +38,7 @@ store.dispatch({ type: "@@INIT" });
 // Create Action Function
 function createCandy(candy) {
   return {
+    // returning the action
     type: "ADD_CANDY",
     candy: candy,
   };
